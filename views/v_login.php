@@ -11,8 +11,9 @@
 			<form action="" method="post">
 			<div>
 				<?php if ($error['alert'] !=''){
-				echo "<div class='alert'>$error['error_alert']</div>"}?>
+				echo "<div class='alert'>".$error['error_alert']."</div>";
 				}
+				?>
 				<label for="username">Username: *</label>
 				<input type="text" name="username" 
 				value="<php echo $input['user'];?>">
