@@ -16,12 +16,12 @@
 				?>
 				<label for="username">Username: *</label>
 				<input type="text" name="username" 
-				value="<php echo $input['user'];?>">
+				value="<?php echo $input['user'];?>">
 				<div class="error"><?php echo $error['user']; ?></div>
 				
 				<label for="password">Password: *</label>
 				<input type="password" name="password" 
-				value="<php echo $input['pass']?>">
+				value="<?php echo $input['pass']?>">
 				<div class="error">
 				<?php echo $error['pass']; ?>
 				</div>

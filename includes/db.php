@@ -1,6 +1,6 @@
 <?php
 //database settings
-$server= 'localhost';
+$server= 'localhost:3308';
 $user='root';
 $pass= '';
 $db= 'login';
