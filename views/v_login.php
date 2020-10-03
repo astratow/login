@@ -6,7 +6,7 @@
 		<link href="views/style.css" media="screen" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
-		<h1>Log IN</h1>
+		<h1>Log In</h1>
 		<div id="content">
 			<form action="" method="post">
 			<div>

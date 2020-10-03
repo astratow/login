@@ -10,28 +10,27 @@ h1{
   margin: 0 0 20px 0;
 }
 #content {
-  padding: 0 20px
+  padding: 0 20px;
 }
 
 .required {
   color: red;
   font-size: .8em;
   clear: both;
-  padding-top: 20px
+  padding-top: 20px;
 }
 .error {
   float: left;
-  clear: both;
-  width: 160px;
+  color:red;
   display: block;
   padding: 4px 0 0 10px;
-  font-size: /8em;  
+  font-size: .8em;  
 }
 .alert {
   background: #FEFF96;
   border: 1px solid yellow;
   padding: 8px; 
-  margin-bottom: 20 px;
+  margin-bottom: 20px;
 }
 
 form {
