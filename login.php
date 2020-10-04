@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
 		$input['pass']=htmlentities($_POST['password'], ENT_QUOTES);
 		
 		//create query
-		if($stmt=$mysqli-prepare("SELECT * FROM members WHERE username=? AND password=?")){
+		if($stmt=$mysqli->prepare("SELECT * FROM members WHERE username=? AND password=?")){
 			$stmt->bind_param("ss", $input['user'], md5($input['pass'].$config['salt']));
 			$stmt->execute();
 			$stmt->store_results();
