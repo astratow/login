@@ -26,11 +26,13 @@ if(isset($_POST['submit'])){
 		$input['user']=htmlentities($_POST['username'], ENT_QUOTES);
 		$input['pass']=htmlentities($_POST['password'], ENT_QUOTES);
 		
-		//creat query
+		//create query
 		if($stmt=$mysqli-prepare("SELECT * FROM members WHERE username=? AND password=?")){
-			
+			$stmt->bind_param("ss", $input['user'], md5($input['pass'].$config['salt']));
+			$stmt->execute();
+			$stmt->store_results();
 		}else{
-			echo "ERROR: Could not prepare SQL statement."
+			echo "ERROR: Could not prepare MySQLi statement."
 		}
 			
 	}	
