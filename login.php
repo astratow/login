@@ -25,6 +25,14 @@ if(isset($_POST['submit'])){
 	}else{
 		$input['user']=htmlentities($_POST['username'], ENT_QUOTES);
 		$input['pass']=htmlentities($_POST['password'], ENT_QUOTES);
+		
+		//creat query
+		if($stmt=$mysqli-prepare("SELECT * FROM members WHERE username=? AND password=?")){
+			
+		}else{
+			echo "ERROR: Could not prepare SQL statement."
+		}
+			
 	}	
 }else{
 	include('views/v_login.php');
