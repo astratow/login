@@ -22,7 +22,10 @@ if(isset($_POST['submit'])){
 		$input['user']=$_POST['username'];
 		$input['pass']=$_POST['password'];
 		include('views/v_login.php');
-}	
+	}else{
+		$input['user']=htmlentities($_POST['username'], ENT_QUOTES);
+		$input['pass']=htmlentities($_POST['password'], ENT_QUOTES);
+	}	
 }else{
 	include('views/v_login.php');
 }
