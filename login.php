@@ -28,11 +28,21 @@ if(isset($_POST['submit'])){
 		
 		//create query
 		if($stmt=$mysqli->prepare("SELECT * FROM members WHERE username=? AND password=?")){
-			$stmt->bind_param("ss", $input['user'], md5($input['pass'].$config['salt']));
+			$stmt->bind_param("ss", $input['user'], md5($input['pass'] . $config['salt']));
 			$stmt->execute();
-			$stmt->store_results();
+			$stmt->store_result();
+			
+			if($stmt->num_rows>0){
+				//set session variable
+				$_SESSION['username']=$input['user'];
+				
+				header("Location: member.php");
+			}else{
+				//username/password incorrect
+				$error['alert'] = "Username or password incorrect";
+			}
 		}else{
-			echo "ERROR: Could not prepare MySQLi statement."
+			echo "ERROR: Could not prepare MySQLi statement.";
 		}
 			
 	}	
