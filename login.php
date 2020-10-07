@@ -33,12 +33,14 @@ if(isset($_POST['submit'])){
 			$stmt->bind_param("ss", $input['user'], $pass);
 			$stmt->execute();
 			$stmt->store_result();
+			//header("Location: members.php");
 			
 			if($stmt->num_rows>0){
 				//set session variable
 				$_SESSION['username']=$input['user'];
+				header("Location: members.php");
+
 				
-				header("Location: member.php");
 			}else{
 				//username/password incorrect
 				$error['alert'] = "Username or password incorrect";
@@ -49,6 +51,8 @@ if(isset($_POST['submit'])){
 			
 	}	
 }else{
+	//header("Location: members.php");
+
 	include('views/v_login.php');
 }
 ?>
