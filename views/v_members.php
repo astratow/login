@@ -3,7 +3,7 @@
 	<head>
 		<title>Members only</title>
 		<meta http-eqiuv="Content-Type" content="text/html" charset="utf-8"/>
-		<link href="views/style.css" media="screen" rel="stylesheet" type="text/css"/>
+		<link href="style.css" media="screen" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		<h1>Members only</h1>
